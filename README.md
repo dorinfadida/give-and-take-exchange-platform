@@ -1,4 +1,4 @@
-# Give & Take ♻️
+<h1> Give & Take ♻️ </h1>
 
 Give & Take is a web platform designed for students and young adults who want to exchange items instead of buying new ones.
 
@@ -78,35 +78,27 @@ The course focused on entrepreneurship, so all technical development was self-ta
 
 ## 📁 Project Structure
 
-```text
 src/
   components/       # UI components and pages
   services/         # Firebase, auth, AI logic
   hooks/            # Custom React hooks
   utils/            # Helper utilities
   firebase.js       # Firebase configuration
-```
 
 ---
 
 ## ⚙️ Installation
 
-```bash
 npm install
-```
 
 ---
 
 ## ▶️ Run the Project
 
-```bash
 npm start
-```
 
 Open:
-```
 http://localhost:3000
-```
 
 ---
 
@@ -128,10 +120,8 @@ REACT_APP_GEMINI_API_KEY=...
 
 ## 🚀 Deployment
 
-```bash
 npm run build
 firebase deploy
-```
 
 ---
 
