@@ -1,0 +1,34 @@
+.looking-for {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+  
+  .looking-for-title {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: #fefeff;
+    border: 1px solid #ccc;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    background-color: #e5e7eb;
+  }
+  

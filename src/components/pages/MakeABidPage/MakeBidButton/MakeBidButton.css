@@ -1,0 +1,21 @@
+/* MakeBidButton.css */
+.make-bid-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #2A9C64;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .make-bid-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .make-bid-button:not(:disabled):hover {
+    background-color: #2A9C64;
+  }

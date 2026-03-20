@@ -1,0 +1,249 @@
+/* ===== Toolbar Container ===== */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 32px;
+  height: 64px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* ===== Logo and Brand ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 120px;
+  flex: 0 1 180px;
+}
+
+.logo {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.large-logo {
+  height: 64px;
+  width: auto;
+  max-height: 64px;
+  object-fit: contain;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* .brand-text can be removed or left as is, since it's no longer used */
+
+/* ===== Search ===== */
+.toolbar-search-center {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 350px;
+  max-width: 350px;
+  min-width: 120px;
+  margin: 0 16px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icons-container, .auth-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.auth-button {
+  border-radius: 999px;
+  padding: 7px 22px;
+  margin: 0 2px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+  box-shadow: 0 1px 4px rgba(42,156,100,0.07);
+}
+
+.auth-button:first-child {
+  background-color: #2a9c64;
+  border: none;
+  color: #fff;
+}
+
+.auth-button:first-child:hover {
+  background-color: #238653;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.auth-button:last-child {
+  background-color: #fff;
+  border: 2px solid #2a9c64;
+  color: #2a9c64;
+}
+
+.auth-button:last-child:hover {
+  background-color: #e0f2ea;
+  color: #217a51;
+  border-color: #217a51;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.logo-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Remove .logo-button if not needed */
+
+@media (max-width: 700px) {
+  .toolbar {
+    padding: 0 8px;
+  }
+  .toolbar-search-center {
+    max-width: 180px;
+    min-width: 60px;
+  }
+  .logo-container {
+    min-width: 60px;
+  }
+}
+
+.profile-image-toolbar {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.profile-image-toolbar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-placeholder-toolbar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toolbar-icon {
+  font-size: 2rem;
+  color: #222;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.toolbar-icon:hover {
+  color: #2a9c64;
+}
+
+.toolbar-bell-icon {
+  font-size: 1.8rem;
+  color: #222;
+  cursor: pointer;
+  margin: 0 14px 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.toolbar-bell-icon:hover {
+  color: #2a9c64;
+}
+
+.toolbar-menu-icon {
+  font-size: 2rem;
+  color: #222;
+  cursor: pointer;
+  margin: 0 0 0 14px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.toolbar-menu-icon:hover {
+  color: #2a9c64;
+} 
+
+/* ===== Toolbar Level Border Styles (Static Versions) ===== */
+
+/* Level 1 - Simple black border */
+.level-1-border-toolbar {
+  border: 2px solid #6e6e6e;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Level 2 - Static silver border */
+.level-2-border-toolbar {
+  border: 3px solid #C0C0C0;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
+  padding: 2px;
+}
+
+/* Level 3 - Static gold border */
+.level-3-border-toolbar {
+  border: 3px solid #FFD700;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #fffde7, #fff9c4);
+  padding: 2px;
+}
+
+/* Level 4 - Static elite border */
+.level-4-border-toolbar {
+  border: 3px solid #FF6B35;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #fff5f0, #ffe8d6);
+  padding: 2px;
+}
+
+/* Level 5 - Static colorful border like in the image */
+.level-5-border-toolbar {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #ff6b9d, #c44569, #feca57, #ff9ff3, #54a0ff, #5f27cd) border-box;
+  background-clip: border-box;
+  padding: 3px;
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.4), 0 0 40px rgba(255, 158, 243, 0.3);
+}
+

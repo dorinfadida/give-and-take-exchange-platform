@@ -1,0 +1,30 @@
+.offer-swap-button {
+  padding: 10px 24px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #2A9C64;
+  color: #fff;
+  border: none;
+  border-radius: 999px; /* כפתור עגול מודרני */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.offer-swap-button:hover {
+  background-color: #238653;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.offer-swap-button:active {
+  background-color: #1f7347;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.offer-swap-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 156, 100, 0.4);
+}

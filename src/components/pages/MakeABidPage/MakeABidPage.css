@@ -1,0 +1,53 @@
+/* MakeABidPage.css - modernized layout */
+.make-a-bid-page {
+    padding: 18px 5vw;
+    font-family: 'Rubik', sans-serif;
+    background-color: #fafafa;
+  }
+  
+  .bid-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .left-column h3,
+  .right-column h3 {
+    font-size: 20px;
+    margin-bottom: 2px;
+    color: #222;
+  }
+  
+  .looking-for-wrapper {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .looking-for-wrapper .looking-for {
+    margin-top: 0;
+  }
+  
+  .looking-for-wrapper .tag {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+  

@@ -1,0 +1,240 @@
+/* Overlay */
+.epm-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+/* Modal Box */
+.epm-modal-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 900px;
+  width: 100%;
+  min-width: 340px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 0 0;
+  overflow: hidden;
+}
+
+/* Close Button */
+.epm-close-button {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: transparent;
+  font-size: 1.7rem;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  z-index: 2;
+}
+
+/* Title */
+.epm-modal-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: 'Rubik', sans-serif;
+  color: #2d3e36;
+  margin: 32px 0 18px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Modal Body Layout */
+.epm-modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 32px 0 32px;
+  box-sizing: border-box;
+}
+
+.epm-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.epm-form-fields {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  justify-content: flex-start;
+}
+
+.epm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.epm-form-group label {
+  font-weight: 500;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.epm-form-group input[type="text"],
+.epm-form-group input[type="email"],
+.epm-form-group input[type="tel"],
+.epm-form-group input[type="password"],
+.epm-form-group input[type="file"],
+.epm-form-group textarea {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.97rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Rubik', sans-serif;
+  transition: border 0.2s;
+}
+
+.epm-form-group input:focus,
+.epm-form-group textarea:focus {
+  border-color: #2a9c64;
+  outline: none;
+}
+
+.epm-photo-preview {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 0.3rem;
+  border: 2px solid #eee;
+}
+
+/* Interests Section */
+.epm-interests-section {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 32px;
+  min-width: 260px;
+  max-width: 380px;
+  width: 100%;
+  height: 100%;
+}
+
+.epm-interests-headline {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 2px;
+}
+
+.epm-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.epm-category-button {
+  background-color: #FCF9F6;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Rubik', sans-serif;
+  white-space: nowrap;
+}
+
+.epm-category-button.selected {
+  background-color: #6eb492;
+  color: white;
+  border-color: #2a9c64;
+}
+
+.epm-category-button:hover {
+  background-color: #e0f4ea;
+}
+
+/* Save Button */
+.epm-form-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 32px 0;
+  background: transparent;
+}
+
+.epm-submit-button {
+  width: 220px;
+  background-color: #2a9c64;
+  color: white;
+  border: none;
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 auto 0 auto;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+}
+
+.epm-submit-button:hover {
+  background-color: #248655;
+}
+
+.epm-success-msg {
+  color: #2a9c64;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .epm-modal-content {
+    max-width: 98vw;
+    min-width: 0;
+  }
+  .epm-modal-body {
+    flex-direction: column;
+    padding: 0 12px 0 12px;
+    gap: 18px;
+  }
+  .epm-interests-section {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 18px;
+  }
+  .epm-form-footer {
+    padding: 18px 0 18px 0;
+  }
+} 

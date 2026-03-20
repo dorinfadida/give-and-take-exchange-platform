@@ -1,0 +1,23 @@
+.google-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d3e36;
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.google-button:hover {
+  background-color: #f9fafb;
+}
+
+.google-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}

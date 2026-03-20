@@ -1,0 +1,242 @@
+/* === Card Container === */
+#item-card {
+  width: 16rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+#item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* === Image Section === */
+#item-image {
+  height: 14rem;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#image-placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+/* === Top Info Bar (User + Distance) === */
+.upper-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FCF9F6;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Grouping user image + name */
+.user-info-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Profile Image Fallback */
+.user-initial-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* User Name */
+.user-name-info {
+  font-size: 15px;
+  font-family: 'Rubik';
+  color: #2d3e36;
+  white-space: nowrap;
+}
+
+/* Location + Distance */
+.location-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #2d3e36;
+}
+
+.location-wrapper svg {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.distance-info {
+  font-size: 0.9rem;
+  font-family: 'Rubik';
+  color: #2d3e36;
+}
+
+/* === Item Details Section === */
+#item-details {
+  padding: 0.75rem;
+  background-color: #FCF9F6;
+  height: 3.5rem; 
+  position: relative;
+  overflow: hidden; 
+}
+
+#item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2d3e36;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 0 2px 0;
+  font-family: 'Rubik';
+}
+
+#item-category {
+  font-size: 0.9rem;
+  font-family: 'Rubik';
+  line-height: 1;
+  color: #2d3e36;
+}
+
+/* Optional listing time */
+#listed-since {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.75rem;
+}
+
+/* === Mutual Match Indicator === */
+.mutual-match-badge {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: #2a9c64;
+  color: white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Mutual Match Tooltip */
+.mutual-tooltip {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 0;
+  background: #2d3e36;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: 'Rubik';
+  line-height: 1.2;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  white-space: normal;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.mutual-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  border: 0.5rem solid transparent;
+  border-top-color: #2d3e36;
+}
+
+/* ===== ItemCard Level Border Styles (Static Versions) ===== */
+
+/* Level 1 - Simple gray border */
+.level-1-border-itemcard {
+  border: 1px solid #6e6e6e;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Level 2 - Static silver border */
+.level-2-border-itemcard {
+  border: 2px solid #C0C0C0;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
+  padding: 1px;
+}
+
+/* Level 3 - Static gold border */
+.level-3-border-itemcard {
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #fffde7, #fff9c4);
+  padding: 1px;
+}
+
+/* Level 4 - Static elite border */
+.level-4-border-itemcard {
+  border: 2px solid #FF6B35;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #fff5f0, #ffe8d6);
+  padding: 1px;
+}
+
+/* Level 5 - Static colorful border */
+.level-5-border-itemcard {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(45deg, #ff6b9d, #c44569, #feca57, #ff9ff3, #54a0ff, #5f27cd) border-box;
+  background-clip: border-box;
+  padding: 1px;
+  box-shadow: 0 0 8px rgba(255, 107, 157, 0.3), 0 0 16px rgba(255, 158, 243, 0.2);
+}

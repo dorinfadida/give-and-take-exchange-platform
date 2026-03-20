@@ -1,0 +1,44 @@
+/* ItemToTakeCard.css */
+.item-to-take-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    gap: 24px;
+  }
+  
+  .item-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .item-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .item-category {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .item-description {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .item-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }

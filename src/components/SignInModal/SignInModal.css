@@ -1,0 +1,116 @@
+.modal-overlay-signin {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content-signin {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+  font-family: 'Rubik';
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-family: 'Rubik';
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2d3e36;
+  font-weight: 600;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  font-family: 'Rubik';
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.signin-form .form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-form label {
+  font-weight: 500;
+  font-family: 'Rubik';
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.signin-form input {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.signin-form input:focus {
+  border-color: #2a9c64;
+  outline: none;
+}
+
+.submit-button {
+  font-family: 'Rubik';
+  background-color: #2a9c64;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 999px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #248655;
+}
+
+
+.google-signin-button {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #444;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.google-signin-button:hover {
+  background-color: #f2f2f2;
+}
+
+
+.google-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}

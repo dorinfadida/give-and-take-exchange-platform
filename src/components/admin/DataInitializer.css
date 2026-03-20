@@ -1,0 +1,124 @@
+.data-initializer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.data-initializer h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.data-initializer__actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.data-initializer__btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.data-initializer__btn--primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.data-initializer__btn--primary:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.data-initializer__btn--danger {
+  background: #f44336;
+  color: white;
+}
+
+.data-initializer__btn--danger:hover:not(:disabled) {
+  background: #da190b;
+  transform: translateY(-2px);
+}
+
+.data-initializer__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.data-initializer__message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.data-initializer__message--success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.data-initializer__message--error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.data-initializer__info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.data-initializer__info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.data-initializer__info ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.data-initializer__info li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.data-initializer__warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ffeaa7;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .data-initializer {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .data-initializer__actions {
+    flex-direction: column;
+  }
+  
+  .data-initializer__btn {
+    min-width: auto;
+  }
+} 

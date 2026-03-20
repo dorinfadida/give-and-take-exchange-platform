@@ -1,0 +1,43 @@
+/* MyItemCard.css */
+.my-item-card {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    gap: 12px;
+    transition: 0.2s ease;
+  }
+  
+  .my-item-card:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .my-item-card.selected {
+    border-color: #4caf50;
+    background-color: #e9fbee;
+  }
+  
+  .my-item-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .my-item-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .my-item-name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .my-item-category {
+    font-size: 13px;
+    color: #666;
+  }

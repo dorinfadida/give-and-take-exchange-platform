@@ -1,0 +1,38 @@
+.status-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 35px;
+  padding: 0;
+  border-radius: 20px;
+  font-weight: 500;
+  color: white;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.status-button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.status-button.accept {
+  background-color: #22c55e;
+}
+
+.status-button.decline {
+  background-color: #ef4444;
+}
+
+.status-button.change {
+  background-color: #d3a92c;
+}
+
+.status-icon {
+  font-size: 0.9rem;
+}

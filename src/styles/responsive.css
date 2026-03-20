@@ -1,0 +1,75 @@
+/* Base for regular desktop */
+.item-page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+  
+  /* Regular page layout */
+  .item-layout {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  /* Inner columns */
+  .left-column,
+  .right-column {
+    flex: 1;
+  }
+  
+  /* For very wide screens (2K screens and above) */
+  @media (min-width: 1600px) {
+    .item-page-wrapper {
+      max-width: 1400px;
+      padding: 60px 80px;
+    }
+  }
+  
+  /* For medium screens (tablets, narrow screens) */
+  @media (max-width: 992px) {
+    .item-page-wrapper {
+      padding: 40px 24px;
+    }
+  
+    .item-layout {
+      gap: 30px;
+    }
+  }
+  
+  /* For small screens (phones) */
+  @media (max-width: 768px) {
+    .item-page-wrapper {
+      padding: 24px 16px;
+    }
+  
+    .item-layout {
+      flex-direction: column;
+      gap: 24px;
+    }
+  
+    .right-column {
+      align-items: center;
+    }
+  
+    .user-info-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  
+    .user-actions {
+      align-self: flex-end;
+    }
+  
+    .thumbnails {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .offer-swap-button {
+      align-self: center;
+    }
+  }
+  

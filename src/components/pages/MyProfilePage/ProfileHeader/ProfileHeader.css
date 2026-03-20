@@ -1,0 +1,429 @@
+/* עטיפה כללית */
+.profile-header {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px 32px; 
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* כפתור עריכה */
+.edit-button {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.15s ease;
+}
+
+.edit-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.edit-button:hover {
+  transform: scale(1.1);
+}
+
+/* פרטי משתמש */
+.user-info-box {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  transition: box-shadow 0.2s ease;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.user-profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Profile Image Fallback for ProfileHeader */
+.user-profilePic.user-initial-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.user-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.user-level {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.user-location {
+  font-size: 1rem;
+  color: #555;
+}
+
+.user-swaps {
+  font-size: 0.95rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+  position: relative;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Level Tooltip */
+.level-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: pre-line;
+  z-index: 1000;
+  min-width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-bottom: 8px;
+}
+
+.level-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #333;
+}
+
+.level-tooltip pre {
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+/* Level Border Styles */
+.level-1-border {
+  border: 2px solid #6e6e6e;
+  border-radius: 50%;
+  position: relative;
+}
+
+
+
+.level-2-border {
+  border: 6px solid #C0C0C0;
+  box-shadow: 0 6px 20px rgba(192,192,192,0.6), inset 0 0 0 3px rgba(255,255,255,0.6);
+  background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
+  padding: 4px;
+  border-radius: 50%;
+  position: relative;
+  animation: silverGlow 2.5s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes silverGlow {
+  0% { 
+    box-shadow: 0 6px 20px rgba(192,192,192,0.6), inset 0 0 0 3px rgba(255,255,255,0.6);
+    border-color: #C0C0C0;
+  }
+  100% { 
+    box-shadow: 0 8px 25px rgba(192,192,192,0.8), inset 0 0 0 3px rgba(255,255,255,0.8);
+    border-color: #A0A0A0;
+  }
+}
+
+
+
+.level-3-border {
+  border: 5px solid #FFD700;
+  box-shadow: 0 4px 15px rgba(255,215,0,0.4), inset 0 0 0 2px rgba(255,255,255,0.3);
+  background: linear-gradient(45deg, #fffde7, #fff9c4);
+  padding: 3px;
+  border-radius: 50%;
+  position: relative;
+}
+
+
+
+
+
+@keyframes goldGlow {
+  0% { 
+    box-shadow: 0 6px 20px rgba(255,215,0,0.6), inset 0 0 0 3px rgba(255,255,255,0.4);
+    border-color: #FFD700;
+  }
+  100% { 
+    box-shadow: 0 8px 30px rgba(255,215,0,0.9), inset 0 0 0 3px rgba(255,255,255,0.6);
+    border-color: #FFEB3B;
+  }
+}
+
+.level-4-border {
+  border: 6px solid #FFD700;
+  box-shadow: 0 8px 25px rgba(255,215,0,0.7), inset 0 0 0 3px rgba(255,255,255,0.5);
+  background: linear-gradient(45deg, #fff8e1, #fff3e0);
+  padding: 3px;
+  border-radius: 50%;
+  position: relative;
+  animation: eliteGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes eliteGlow {
+  0% { 
+    box-shadow: 0 8px 25px rgba(255,215,0,0.7), inset 0 0 0 3px rgba(255,255,255,0.5);
+    border-color: #FFD700;
+  }
+  50% {
+    box-shadow: 0 10px 35px rgba(255,69,0,0.8), inset 0 0 0 3px rgba(255,255,255,0.7);
+    border-color: #FFA500;
+  }
+  100% { 
+    box-shadow: 0 8px 25px rgba(255,215,0,0.7), inset 0 0 0 3px rgba(255,255,255,0.5);
+    border-color: #FFD700;
+  }
+}
+
+.level-4-border::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--level-icon-url) center/contain no-repeat;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: crownFloat 2s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+
+
+
+.level-5-border {
+  border: 6px solid transparent;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF69B4, #00CED1, #FFD700, #FF1493, #00BFFF, #FFD700);
+  background-size: 400% 400%;
+  animation: diamondBorder 3s ease-in-out infinite;
+  position: relative;
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(255,215,0,0.7), inset 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+.level-5-border::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(6px);
+  animation: diamondGlow 4s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes diamondBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes diamondGlow {
+  0% { 
+    filter: blur(6px);
+    opacity: 0.7;
+  }
+  100% { 
+    filter: blur(10px);
+    opacity: 0.9;
+  }
+}
+
+
+
+/* פרטי קשר */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+  border-left: 1.5px solid #eee;
+  border-right: 1.5px solid #eee;
+  min-width: 200px;
+}
+
+.contact-info-box {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-label {
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* תגיות */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.looking-for-title {
+  font-weight: 600;
+  font-size: 1rem; /* גדול יותר */
+  margin-bottom: 4px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* יותר מרווח */
+  max-width: 100%;
+}
+
+.tag {
+  font-size: 0.85rem; /* גדול יותר */
+  padding: 6px 14px; /* גדול ומרופד יותר */
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #e5e7eb;
+}
+
+/* מובייל */
+@media (max-width: 768px) {
+  .profile-row {
+    flex-direction: column;
+  }
+
+  .profile-header {
+    padding: 20px;
+  }
+
+  .edit-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .middle-section {
+    border-left: none;
+    border-right: none;
+    padding: 16px 0;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .level-tooltip {
+    min-width: 250px;
+    font-size: 0.75rem;
+  }
+
+  .user-profilePic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-name {
+    font-size: 1.2rem;
+  }
+
+  .user-level {
+    font-size: 0.8rem;
+  }
+}

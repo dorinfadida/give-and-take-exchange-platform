@@ -1,0 +1,150 @@
+.my-item-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+  }
+  
+  .my-item-window {
+    background: rgb(253, 249, 244);
+    padding: 32px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 960px;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .my-item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  
+  .item-details-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .gallery-wrapper {
+    position: relative;
+  }
+  
+  .details-with-edit {
+    position: relative;
+  }
+  
+  .edit-item-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .edit-item-button img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.2s ease;
+  }
+  
+  .edit-item-button:hover img {
+    transform: scale(1.1);
+  }
+  
+  .my-item-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  
+  .taken-btn,
+  .delete-btn {
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .taken-btn {
+    background: #2A9C64;
+    color: white;
+  }
+  
+  .delete-btn {
+    background: #d32f2f;
+    color: white;
+  }
+  
+  .close-button-my-item {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Make gallery arrows appear inside image container */
+  .gallery-wrapper .main-image-container {
+    position: relative;
+  }
+  
+  .gallery-wrapper .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .gallery-wrapper .arrow-left {
+    left: 8px;
+  }
+  
+  .gallery-wrapper .arrow-right {
+    right: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .my-item-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .my-item-window {
+      padding: 24px;
+    }
+  
+    .edit-item-button {
+      top: 12px;
+      right: 12px;
+    }
+  }
+  

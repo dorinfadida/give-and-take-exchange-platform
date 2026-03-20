@@ -1,0 +1,24 @@
+.menu-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  color: #333;
+  font-size: 0.97rem;
+  border-radius: 6px;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.menu-button:hover {
+  background-color: #e0f2ea;
+  color: #2a9c64;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}

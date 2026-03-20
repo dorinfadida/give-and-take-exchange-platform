@@ -1,0 +1,104 @@
+.item-details-itemPage {
+    text-align: left;
+}
+  
+  .item-category-itemPage {
+    color: #888;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 12px;
+    
+  }
+  
+  .item-name-itemPage {
+    font-size: 32px;
+    margin: 5px 0 15px 0;
+  }
+  
+  .item-description-box-itemPage {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 0 10px 10px 10px; /* ביטול radius עליון שמאל */
+    line-height: 1.7;
+    max-width: 600px;
+    text-align: left;
+    border: 1px solid #ccc;
+    position: relative;
+    top: -1px;
+    z-index: 0;
+  }
+  
+  .item-description-itemPage {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .tabs-wrapper {
+    display: flex;
+    gap: 4px;
+    margin-bottom: -1px; 
+    z-index: 1;
+    position: relative;
+  }
+  
+  .tab-button {
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-bottom: 1px; 
+  }
+  
+  .tab-button:hover {
+    background: #e7e7e7;
+  }
+  
+  .tab-button.active {
+    background: white;
+    border-bottom: 1px solid white;
+    font-weight: 600;
+  }
+
+  /* Attributes styling */
+  .attributes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .attribute-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .attribute-item:last-child {
+    border-bottom: none;
+  }
+
+  .attribute-label {
+    font-weight: 600;
+    color: #333;
+    min-width: 120px;
+    margin-right: 12px;
+    font-size: 16px;
+  }
+
+  .attribute-value {
+    color: #666;
+    font-size: 16px;
+    flex: 1;
+  }
+
+  .no-details {
+    color: #888;
+    font-style: italic;
+    margin: 0;
+    font-size: 16px;
+  }
+  

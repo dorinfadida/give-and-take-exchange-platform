@@ -1,0 +1,76 @@
+.gallery {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .main-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3); /* רקע שקוף יותר */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* אפקט עדין */
+  }
+  
+  .arrow-button:hover {
+    background-color: rgba(255, 255, 255, 0.55); /* טיפה פחות שקוף בהובר */
+  }
+  
+  .arrow-left {
+    left: 10px;
+  }
+  
+  .arrow-right {
+    right: 10px;
+  }
+  
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1); 
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 0.8px solid #ccc;
+  }
+  
+  .thumbnail.active {
+    border: 1.5px solid #007bff;
+  }
+  

@@ -1,0 +1,87 @@
+.my-profile-page {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background-color: #f9fafb; /* רקע אחיד ועדין */
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+  }
+
+  
+  /* מובייל */
+  @media (max-width: 768px) {
+    .profile-header {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+  
+  /* -------- Section -------- */
+  .profile-items-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                     
+  }
+  
+  /* כפתור הפלוס */
+  .add-item-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 30px;
+    border: 1.5px solid #555;
+    border-radius: 6px;
+  }
+  
+  /* רשת כרטיסים */
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+    gap: 28px;                     
+  }
+  
+  /* כרטיס בודד */
+  .item-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;          
+    overflow: hidden;
+    background: #f0f1f3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+    transition: transform .15s ease;
+  }
+  
+  .item-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .item-image img {
+    object-fit: cover;
+    height: 160px;               
+    width: 100%;
+  }
+  
+  .item-details {
+    padding: 10px 14px;            
+  }
+  
+  /* מידע משלים */
+  .item-meta {
+    font-size: 0.85rem;          
+    color: #555;
+    justify-content: space-between;
+  }
+
+/* Loading state */
+.loading-items {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  color: #666;
+}
+  
