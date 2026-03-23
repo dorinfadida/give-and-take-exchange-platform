@@ -1,8 +1,7 @@
-<h1> Give & Take ♻️ </h1>
+# Give & Take ♻️ 
 
-Give & Take is a web platform designed for students and young adults who want to exchange items instead of buying new ones.
-
-The platform promotes a sustainable lifestyle by encouraging reuse — turning "one person's trash into another person's treasure".
+Give & Take is a web platform designed for students and young adults who want to exchange items instead of buying new ones. The platform promotes a sustainable lifestyle by encouraging reuse -
+turning "one person's trash into another person's treasure".
 
 ---
 

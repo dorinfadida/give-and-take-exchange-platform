@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SignInModal.css';
 import { signInWithGoogle } from '../../services/authService';
 import GoogleSigningButton from '../GoogleSigning/GoogleSigning';
 
-const SignInModal = ({ onClose, onComplete, onGoogleSignIn }) => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) return;
-    onComplete({ email });
-  };
+const SignInModal = ({ onClose, onGoogleSignIn }) => {
 
   return (
     <div className="modal-overlay-signin" onClick={onClose}>
@@ -18,42 +11,20 @@ const SignInModal = ({ onClose, onComplete, onGoogleSignIn }) => {
         <button className="close-button" onClick={onClose}>×</button>
         <h2 className="modal-title">Sign In</h2>
 
-        <form className="signin-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Email:</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div className='google-button-wrapper'>
-            <GoogleSigningButton
-              onClick={async () => {
-                try {
-                  const user = await signInWithGoogle();
-                  if (onGoogleSignIn) {
-                    onGoogleSignIn(user);
-                  } else {
-                    onComplete({
-                      name: user.displayName,
-                      email: user.email,
-                      photoURL: user.photoURL,
-                      uid: user.uid
-                    });
-                  }
-                } catch (error) {
-                  alert('Google Sign-In failed: ' + error.message);
+        <div className='google-button-wrapper'>
+          <GoogleSigningButton
+            onClick={async () => {
+              try {
+                const user = await signInWithGoogle();
+                if (onGoogleSignIn) {
+                  onGoogleSignIn(user);
                 }
-              }}
-            />
-          </div>
-
-          <button type="submit" className="submit-button">Sign In</button>
-        </form>
+              } catch (error) {
+                alert('Google Sign-In failed: ' + error.message);
+              }
+            }}
+          />
+        </div>
       </div>
     </div>
   );

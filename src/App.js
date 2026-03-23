@@ -131,17 +131,6 @@ function App() {
             setIsSignInModalOpen(false);
             setIsSignUpModalOpen(true);
           }}
-          onComplete={async (userInfo) => {
-            // התחברות רגילה (לא גוגל)
-            const existingUser = await FirebaseDataService.getUserByEmail(userInfo.email);
-            if (existingUser) {
-              setUser(existingUser);
-              setIsSignedIn(true);
-              setIsSignInModalOpen(false);
-            } else {
-              alert('No user found with this email. Please sign up first.');
-            }
-          }}
         />
       )}
 
