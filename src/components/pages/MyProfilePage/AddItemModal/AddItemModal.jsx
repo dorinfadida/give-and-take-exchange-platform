@@ -102,7 +102,7 @@ const AddItemModal = ({ onClose, user, onItemAdded, editMode = false, itemToEdit
       })));
     } catch (error) {
       console.error('Failed to generate description:', error);
-      setGenerationError('Failed to generate description. Please try again.');
+      setGenerationError(error?.message || 'Failed to generate description. Please try again.');
     } finally {
       setIsGenerating(false);
     }

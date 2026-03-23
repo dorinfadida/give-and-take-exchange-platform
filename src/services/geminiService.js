@@ -4,6 +4,10 @@ const MODEL = 'gemini-2.0-flash-001';
 export class GeminiService {
   static async describeProduct(imageFile) {
     try {
+      if (!API_KEY) {
+        throw new Error('Gemini API key is missing. Set REACT_APP_GEMINI_API_KEY in your .env file and restart the app.');
+      }
+
       // Convert image to base64
       const base64Image = await this.fileToBase64(imageFile);
 
@@ -154,6 +158,12 @@ export class GeminiService {
       );
 
       const data = await response.json();
+
+      if (!response.ok) {
+        const apiError = data?.error?.message || `Gemini request failed with status ${response.status}`;
+        throw new Error(apiError);
+      }
+
       const output = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
       
       console.log('Gemini API raw response:', data);
