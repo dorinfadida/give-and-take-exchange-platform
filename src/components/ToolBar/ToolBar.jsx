@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import SearchBar from '../pages/HomePage/Search/Search';
 import NotificationsWindow from "../common/NotificationsWindow/NotificationsWindow";
 import { useClickOutside } from "../../hooks/useClickOutside";
-import { getProfileImageUrl, getUserDisplayName, getInitial, getColorFromName } from '../../utils/profileImageUtils';
+import { getProfileImageUrl, getUserDisplayName, getInitial, getAvatarFallbackColor } from '../../utils/profileImageUtils';
 import { getCurrentLevel } from '../../utils/gamificationUtils';
 
 const ToolBar = ({ toggleMenu, isSignedIn, onSignUpClick, onSignInClick, user, search, setSearch, selectedDistance, setSelectedDistance, selectedInterests, setSelectedInterests, onApply, userInterests }) => {
@@ -24,7 +24,7 @@ const ToolBar = ({ toggleMenu, isSignedIn, onSignUpClick, onSignInClick, user, s
   const profileImageUrl = getProfileImageUrl(user);
   const displayName = getUserDisplayName(user);
   const initial = getInitial(displayName);
-  const bgColor = getColorFromName(displayName);
+  const bgColor = getAvatarFallbackColor(user);
   
   // Get user level for dynamic borders
   const finalSwaps = typeof user?.swaps === 'number' ? user.swaps : 0;

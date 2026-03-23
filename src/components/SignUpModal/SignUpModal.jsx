@@ -3,7 +3,7 @@ import './SignUpModal.css';
 import { categoryOptions } from '../pages/HomePage/Search/FilterComponent/filterOptions';
 import { signInWithGoogle } from '../../services/authService';
 import GoogleSigningButton from '../GoogleSigning/GoogleSigning';
-import { getInitial, getColorFromName } from '../../utils/profileImageUtils';
+import { getInitial, generateRandomAvatarColor } from '../../utils/profileImageUtils';
 
 // CityAutocomplete component (inline for now)
 function CityAutocomplete({ value, onChange, onSelect }) {
@@ -79,7 +79,7 @@ function CityAutocomplete({ value, onChange, onSelect }) {
   );
 }
 
-const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '', defaultPhone = '', defaultPhoto = null, hideGoogleButton = false }) => {
+const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '', defaultPhone = '', defaultPhoto = null, defaultAvatarColor = '', hideGoogleButton = false }) => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState(defaultName);
   const [email, setEmail] = useState(defaultEmail);
@@ -92,13 +92,15 @@ const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '',
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
   const [isGoogleSignedIn, setIsGoogleSignedIn] = useState(false);
+  const [avatarColor, setAvatarColor] = useState(defaultAvatarColor || null);
 
   useEffect(() => {
     setName(defaultName);
     setEmail(defaultEmail);
     setPhone(defaultPhone);
     setPhotoPreview(defaultPhoto);
-  }, [defaultName, defaultEmail, defaultPhone, defaultPhoto]);
+    setAvatarColor(defaultAvatarColor || null);
+  }, [defaultName, defaultEmail, defaultPhone, defaultPhoto, defaultAvatarColor]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -124,6 +126,7 @@ const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '',
       setPhotoPreview(user.photoURL || '');
       setGoogleUser(user);
       setIsGoogleSignedIn(true);
+      setAvatarColor(user.photoURL ? null : generateRandomAvatarColor());
     } catch (error) {
       alert('Google Sign-Up failed: ' + error.message);
     }
@@ -153,6 +156,7 @@ const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '',
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const hasProfileImage = !!(photo || (googleUser && googleUser.photoURL));
     onComplete({
       name,
       email,
@@ -161,6 +165,7 @@ const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '',
       interests: selectedCategories,
       uid: googleUser ? googleUser.uid : undefined,
       photoURL: googleUser ? googleUser.photoURL : undefined,
+      avatarColor: hasProfileImage ? '' : (avatarColor || generateRandomAvatarColor()),
       location: city,
       lat,
       lng,
@@ -203,7 +208,7 @@ const SignUpModal = ({ onClose, onComplete, defaultName = '', defaultEmail = '',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        background: getColorFromName(name),
+                        background: avatarColor || '#92A8D1',
                         color: '#fff',
                         fontSize: '1.5rem',
                         fontWeight: 700,

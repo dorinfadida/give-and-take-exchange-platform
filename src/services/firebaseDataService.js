@@ -175,6 +175,7 @@ class FirebaseDataService {
         name: user.displayName || user.name || '',
         email,
         photoURL: user.photoURL || user.photo || '',
+        avatarColor: user.avatarColor || '',
         phone: user.phoneNumber || user.phone || '',
         interests: user.interests || [],
         swaps: 0,

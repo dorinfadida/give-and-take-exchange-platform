@@ -1,14 +1,14 @@
 // components/pages/ItemPage/UserInfoBox/UserInfoBox.jsx
 import React from 'react';
 import './UserInfoBox.css';
-import { getProfileImageUrl, getUserDisplayName, getInitial, getColorFromName } from '../../../../utils/profileImageUtils';
+import { getProfileImageUrl, getUserDisplayName, getInitial, getAvatarFallbackColor } from '../../../../utils/profileImageUtils';
 import { getCurrentLevel } from '../../../../utils/gamificationUtils';
 
 export default function UserInfoBox({ user }) {
   const profileImageUrl = getProfileImageUrl(user);
   const displayName = getUserDisplayName(user);
   const initial = getInitial(displayName);
-  const bgColor = getColorFromName(displayName);
+  const bgColor = getAvatarFallbackColor(user);
   
   // Get user level for dynamic borders
   const finalSwaps = typeof user?.swaps === 'number' ? user.swaps : 0;

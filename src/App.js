@@ -109,6 +109,7 @@ function App() {
           defaultEmail={googleUserData?.email || ''}
           defaultPhone={googleUserData?.phoneNumber || ''}
           defaultPhoto={googleUserData?.photoURL || ''}
+          defaultAvatarColor={googleUserData?.avatarColor || ''}
           hideGoogleButton={!!googleUserData}
         />
       )}

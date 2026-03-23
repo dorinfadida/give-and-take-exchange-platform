@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCard.css';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { getProfileImageUrl, getUserDisplayName, getInitial, getColorFromName } from '../../utils/profileImageUtils';
+import { getProfileImageUrl, getUserDisplayName, getInitial, getAvatarFallbackColor } from '../../utils/profileImageUtils';
 import { getCurrentLevel } from '../../utils/gamificationUtils';
 
 const ItemDetails = ({ name, category, listedSince = false }) => {
@@ -21,6 +21,7 @@ export const ItemCard = ({
   category,
   listedSince = false,
   profileImage,
+  userAvatarColor,
   distance,
   userName,
   userSwaps = 0,
@@ -35,13 +36,14 @@ export const ItemCard = ({
     name: userName,
     profilePic: profileImage,
     photoURL: profileImage,
+    avatarColor: userAvatarColor,
     swaps: userSwaps
   };
   
   const profileImageUrl = getProfileImageUrl(mockUser);
   const displayName = getUserDisplayName(mockUser);
   const initial = getInitial(displayName);
-  const bgColor = getColorFromName(displayName);
+  const bgColor = getAvatarFallbackColor(mockUser);
   
   // Get user level for dynamic borders
   const finalSwaps = typeof userSwaps === 'number' ? userSwaps : 0;

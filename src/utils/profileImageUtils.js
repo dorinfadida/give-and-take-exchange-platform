@@ -1,5 +1,7 @@
 // Profile image utility functions
 
+const AVATAR_COLORS = ['#A3D8F4', '#F7CAC9', '#92A8D1', '#F6E2B3', '#B5EAD7', '#FFB7B2', '#B2B7FF', '#B5B2FF'];
+
 /**
  * Get the first letter of a name for avatar fallback
  */
@@ -12,12 +14,28 @@ export function getInitial(name) {
  * Generate a consistent color based on name for avatar fallback
  */
 export function getColorFromName(name) {
-  const colors = ['#A3D8F4', '#F7CAC9', '#92A8D1', '#F6E2B3', '#B5EAD7', '#FFB7B2', '#B2B7FF', '#B5B2FF'];
   let hash = 0;
   for (let i = 0; i < (name || '').length; i++) {
     hash = name.charCodeAt(i) + ((hash << 5) - hash);
   }
-  return colors[Math.abs(hash) % colors.length];
+  return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
+}
+
+/**
+ * Generate a random color for avatar fallback
+ */
+export function generateRandomAvatarColor() {
+  return AVATAR_COLORS[Math.floor(Math.random() * AVATAR_COLORS.length)];
+}
+
+/**
+ * Get fallback avatar color: user-specific saved color first, then deterministic name color
+ */
+export function getAvatarFallbackColor(user) {
+  if (user?.avatarColor && typeof user.avatarColor === 'string' && user.avatarColor.trim()) {
+    return user.avatarColor;
+  }
+  return getColorFromName(getUserDisplayName(user));
 }
 
 /**

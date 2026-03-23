@@ -331,6 +331,7 @@ export const MainContainer = ({ user, search = '', selectedDistance = '', select
                 category={item.category}
                 listedSince={item.listedSince}
                 profileImage={item.profileImageUrl}
+                userAvatarColor={item.user?.avatarColor}
                 distance={item.displayDistance}
                 userName={item.user?.name || item.userName}
                 isMutualMatch={item.isMutualMatch}

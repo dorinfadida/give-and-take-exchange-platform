@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProfileHeader.css';
-import { getProfileImageUrl, getUserDisplayName, getInitial, getColorFromName } from '../../../../utils/profileImageUtils';
+import { getProfileImageUrl, getUserDisplayName, getInitial, getAvatarFallbackColor } from '../../../../utils/profileImageUtils';
 import { 
   getCurrentLevel, 
   getProgressToNextLevel, 
@@ -55,7 +55,7 @@ const ProfileHeader = ({ user, onEditClick }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  background: getColorFromName(finalName),
+                  background: getAvatarFallbackColor(user),
                   color: '#fff',
                   fontSize: '2.2rem',
                   fontWeight: 700,
